@@ -12,13 +12,14 @@ while True:
         print("请输入一个正整数！")
     else:
         break
-end = int(sqrt(num))
-is_prime = True
-for i in range(2, end + 1):
-    if num % i == 0:
-        is_prime = False
-        break
-if is_prime and num != 1:
-    print('%d是素数' % num)
-else:
-    print('%d不是素数' % num)
+pn = []
+for i in range(2, num + 1):
+    end = int(sqrt(i))
+    is_prime = True
+    for j in range(2, end + 1):
+        if i % j == 0:
+            is_prime = False
+            break
+    if is_prime and i != 1:
+        pn.append(i)
+print(pn)
