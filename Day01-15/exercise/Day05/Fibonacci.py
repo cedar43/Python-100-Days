@@ -25,5 +25,13 @@ for i in range(2, num):
     z = x + y
     fs.append(z)
     x, y = y, z
+    # x, y = y, x + y
 print(fs)
 # print(time.process_time_ns() - start_2)
+
+# Method 3
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+        yield a
